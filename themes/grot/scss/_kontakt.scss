@@ -1,0 +1,151 @@
+#PageKontakt{
+    height: 50vh;
+}
+
+div#kontakt{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: rgba(15,47,57,0.77);
+
+  h2{
+	font-family: 'Bree Serif', serif;
+	font-size: map-get($size, section);
+	color: map-get($kolor, light2);
+	margin-bottom: 22px;
+  }
+  address{
+	font-style: normal;
+  }
+
+}
+
+
+.wpcf7-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  p,input,textarea,.tnp-subscription input[type=email]{
+	color: map-get($kolor, dark);
+	font-family: 'Bree Serif', serif;
+	box-sizing: border-box;
+  }
+  h2{
+	color:red;
+  }
+
+  p{
+	margin:8px 0;
+  }
+
+  p:nth-child(5){
+  	display: flex;
+	justify-content: center;
+	align-items: center;
+  }
+
+
+  input {
+	border: 1px solid map-get($kolor, dark);
+	width: 485px;
+	height: 45px;
+	font-size: 14px;
+	padding-left: 15px;
+    background-color: rgba(256,256,256,0.6);
+	@media only screen and (max-width:749px){
+	  width:75vw;
+	}
+	  }
+  textarea {
+	width: 485px;
+	height: 314px;
+	font-size: 14px;
+	padding: 15px;
+	border: 1px solid map-get($kolor, dark);
+    background-color: rgba(256,256,256,0.6);
+	@media only screen and (max-width:749px){
+	  width:75vw;
+	}
+	&:focus {
+	  border-color: map-get($kolor, light2);
+	}
+  }
+	input::placeholder{
+	  color:map-get($kolor, dark);
+	  margin-left: 15px;
+	}
+  input:focus {
+	border-color: map-get($kolor, light2);
+  }
+}
+ 
+  input[type="submit"]{
+	width:133px;
+	height: 40px;
+	background-color:map-get($kolor, light);
+	color: map-get($kolor, dark);
+	font-size: 14px;
+	cursor:pointer;
+	outline: 0;
+	box-sizing: border-box;
+	margin: 25px 0 85px 0;
+	padding-right: 12px;
+	align-self: flex-start;
+  }
+.tnp-subscription div.tnp-field {
+    color:map-get($kolor, light);
+    input::placeholder{
+      color:map-get($kolor, dark);
+      margin-left: 15px;
+    }
+  input:focus {
+    border-color: map-get($kolor, light2);
+  }
+}
+
+
+
+.icon{
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  @media only screen and (max-width:730px){
+	flex-direction: column;
+	align-items: center;
+  }
+  a {
+	display: flex;
+	span {
+	  text-align: center;
+	  @media only screen and (max-width: 730px) {
+		margin: 20px 0;
+	  }
+	}
+  }
+}
+.cnt {
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  @media only screen and (max-width:730px){
+	margin:0;
+	text-align: center;
+  }
+}
+
+.mar{
+  margin: 155px 0 125px 0;
+  @media only screen and (max-width: 500px){
+	margin: 60px 0;
+
+  }
+}
+
+.txtCenter{
+  @media only screen and (max-width: 749px){
+	text-align: center;
+
+  }
+}

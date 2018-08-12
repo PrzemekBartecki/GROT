@@ -1,0 +1,61 @@
+
+
+h1, h2, h3, h4, h5, h6, li, a, *{
+  margin:0;
+  padding: 0;
+}
+
+html, body {
+  box-sizing: border-box;
+  height: 100%;
+}
+
+html{
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
+$kolor: (
+        dark: #0e2f39,
+        light: #dddde0,
+        light2: #bebebe,
+        menuHA: #80837d,
+        beam: #485d51,
+        beamLi: #475c51,
+        sidebar: #090c0d
+);
+
+$size: (
+        title: 39px,
+        section: 22px,
+        text: 16px,
+        li: 14px,
+        footer: 10px,
+        footer2: 12px
+);
+
+
+
+
+p{
+  font-size: map_get($size, text);
+  color: map_get($kolor, light2);
+  font-family: 'Open Sans', sans-serif;
+  line-height: 34px;
+  margin:0 0 20px 0;
+  @media only screen and (max-width:340px){
+    font-size: 7vw;
+  }
+   a{
+    text-decoration: underline;
+  }
+ }
+
+
+img{
+  max-width:100%;
+  height: auto;
+}
+a{
+  color: map_get($kolor, menuHA);
+}

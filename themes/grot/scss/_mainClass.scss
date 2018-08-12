@@ -1,0 +1,116 @@
+.container{
+  max-width: 960px;
+  width:100%;
+  margin:0 auto;
+  box-sizing: border-box;
+}
+
+.container2 {
+  max-width: 1125px;
+}
+
+
+.emptySite{
+  min-height: calc(100vh - 364px);
+}
+
+section{
+  padding: 20px 0;
+}
+
+.marBigBt{
+  margin-bottom: 60px;
+}
+
+.marPBt{
+  margin-bottom: 91px;
+}
+
+.marginB70{
+  margin-bottom: 43px;
+}
+
+
+.bg {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+}
+
+.bgMarins{
+  background-image: url("../images/wspolpraca.jpg");
+  background-attachment: fixed;
+}
+
+.bgPilot{
+  background-image: url("../images/pilot.jpg");
+  background-attachment: fixed;
+
+}
+
+.bgTank{
+  background-image: url("../images/czolg.jpg");
+  background-attachment: fixed;
+}
+.bgPeople{
+  background-image: url("../images/helikopter.jpg");
+  background-attachment: fixed;
+}
+.bgSlaid1{
+    background-image: url("../images/slaid1.jpg");
+    background-attachment: fixed;
+}
+.bgSlaid2{
+    background-image: url("../images/slaid2.jpg");
+    background-attachment: fixed;
+}
+.bgSlaid3{
+    background-image: url("../images/slaid3.jpg");
+    background-attachment: fixed;
+}
+.bgMapka{
+  background: url("../images/mapka.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  }
+
+.bgLight {
+  background-color: map-get($kolor, light);
+  .title, .part, p {
+    color: map-get($kolor, dark)
+  }
+}
+.bgDark{
+  background-color: map-get($kolor, dark);
+  .title, .part, p, a {
+    color: map-get($kolor, light2)
+  }
+}
+
+
+.triangle{
+  width: 0;
+  height: 0;
+  border-top: 6px solid transparent;
+  border-left: 12px solid map-get($kolor, dark);
+  border-bottom: 6px solid transparent;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.readSpace{
+  margin: 0 30px;
+  @media only screen and (max-width:340px){
+    margin: 0 20px;
+  }
+}
+
+.textMobile{
+  text-align: center;
+  margin:0 15px;
+}
+.obrazek{
+  max-width: 960px;
+  margin:-20px auto 5px auto;
+}

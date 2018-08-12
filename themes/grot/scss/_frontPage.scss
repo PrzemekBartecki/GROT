@@ -1,0 +1,351 @@
+
+/*
+SLAJDER na z kursu kursjs.pl autorstwa Marcina Domańskiego
+*/
+
+.slide {
+  opacity: 0;
+  z-index: 0;
+  position: relative;
+  transition:2s all;
+}
+.slide .title {
+  left: -2rem;
+  opacity: 0;
+}
+
+
+.slide.active {
+  opacity: 1;
+  z-index: 1;
+}
+.slide.active .title {
+  left: 0;
+  opacity: 1;
+}
+
+.slider {
+  position: relative;
+  background-color: transparent;
+  background-size: cover;
+  background-position: center center;
+}
+
+
+.slider-slides-cnt {
+  height:75vh;
+  position: relative;
+}
+
+
+.slider-slide {
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  flex-direction: column;
+  opacity:0;
+  z-index: 0;
+}
+
+.slider-slide-active {
+  z-index: 1;
+}
+
+
+.slider .element-title {
+  color:map-get($kolor, light);
+  position: relative;
+  left:-3rem;
+  opacity:0;
+  font-size:map-get($size, title);
+  text-transform: uppercase;
+  font-weight: normal;
+  margin-top:0;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  @media only screen and (max-width:749px){
+   display: none;
+  }
+}
+.slider .element-text {
+  position: relative;
+  left:-3rem;
+  opacity:0;
+  color: map-get($kolor, light);
+  padding-left:4rem;
+  padding-right:4rem;
+  text-align: center;
+  font-family: 'Bree Serif', serif;
+  font-style: italic;
+  max-width:75%;
+}
+
+
+.slider-slide {
+  opacity: 0;
+  transition:0.4s all;
+}
+.slider .element-title {
+  left:-3rem;
+  opacity:0;
+  transition: 2s left, 2s opacity;
+}
+.slider .element-text {
+  left:-3rem;
+  opacity:0;
+  transition: 2s 1s left, 2s 1s opacity;
+}
+
+
+.slider-slide-active {
+  opacity: 1;
+}
+.slider-slide-active .element-title {
+  left:0;
+  opacity:1;
+}
+.slider-slide-active .element-text {
+  left:0;
+  opacity:1;
+  margin-bottom: 150px;
+}
+
+
+.slider-button-prev,
+.slider-button-next {
+  cursor: pointer;
+  z-index: 2;
+  position: absolute;
+  left:0;
+  top:0;
+  width:4rem;
+  height:100%;
+  background: rgba(0,0,0,0.1);
+  border:0;
+  text-indent:-999px;
+  overflow:hidden;
+}
+.slider-button-next {
+  left:auto;
+  right:0;
+}
+.slider-button-prev:focus,
+.slider-button-next:focus {
+  outline: none;
+}
+.slider-button-prev:before,
+.slider-button-next:before {
+  content:'<';
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left:0;
+  top:0;
+  width:100%;
+  height:100%;
+  font-size:2rem;
+  color:map-get($kolor, light2);
+  text-indent: 0;
+}
+.slider-button-next:before {
+  content: '>';
+}
+
+
+.slider-dots {
+  z-index: 2;
+  position: absolute;
+  left:0;
+  bottom:45px;
+  margin:0;
+  padding:0;
+  width:100%;
+  display: flex;
+  justify-content: center;
+  list-style:none;
+}
+.slider-dots-element {
+}
+.slider-dots-button {
+  background: transparent;
+  width:30px;
+  height:30px;
+  border:0;
+  text-indent:-999px;
+  overflow: hidden;
+  cursor: pointer;
+  position: relative;
+}
+.slider-dots-button:before {
+  content:'';
+  position: absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%, -50%);
+  background: map-get($kolor, light);
+  width:16px;
+  height:16px;
+  border-radius: 50%;
+  transition:0.5s all;
+  box-shadow:inset 0 0 0 2px map-get($kolor, light);
+}
+.slider-dots-element-active .slider-dots-button:before {
+  background: map-get($kolor, dark);
+  transform:translate(-50%, -50%) scale(1.2);
+}
+.slider-dots-button:focus {
+  outline: none;
+}
+
+.partSlaid{
+  font-size: 33px;
+  word-spacing: -3px;
+  letter-spacing: 2px;
+  line-height: 57px;
+  @media only screen and (max-width:340px){
+    font-size: 9vw;
+  }
+}
+.titleSlaid {
+  font-size: map-get($size, title);
+  font-family: 'Bree Serif', serif;
+  color: map_get($kolor, light2);
+  word-spacing: 6px;
+  line-height: 57px;
+  font-weight: normal;
+}
+
+span.podkreslenie{
+    display: block;
+    position: relative;
+    top: -57px;
+    max-width: 688px;
+    height: 11px;
+    background-image: url(../images/line.png);
+    background-repeat: no-repeat;
+    margin: 0 auto;
+}
+
+.btnSlaid{
+  margin: 36px 0;
+  width: 182px;
+  height: 43px;
+  color: map-get($kolor, light);
+  border: 1px solid map-get($kolor, dark);
+  background-color: transparent;
+  font-size: 19px;
+}
+
+
+
+
+
+/* Koniec slajderu */
+
+.title,.part{
+  font-size: map-get($size, title);
+  font-family: 'Bree Serif', serif;
+  color:map_get($kolor, light2) ;
+  word-spacing: 6px;
+  line-height: 1.5em;
+  font-weight: normal;
+  @media only screen and (max-width:390px){
+    font-size: 14vw;
+  }
+  }
+
+.bgDark{
+  background-color: map_get($kolor, dark);
+}
+ .beamBig:before{
+  content: "";
+  width:8px;
+  height:40px;
+  background-color: map_get($kolor, beam);
+  display: inline-block;
+  margin-right: 31px;
+   @media only screen and (max-width:840px){
+     margin-right: 20px;
+   }
+   @media only screen and (max-width:820px){
+     margin-right: 10px;
+   }
+   @media only screen and (max-width:812px){
+     display: none;
+   }
+
+}
+
+.part{
+  font-size: map_get($size, section ) ;
+  margin-bottom: 36px;
+  word-spacing: -3px;
+  letter-spacing: 2px;
+  @media only screen and (max-width:749px){
+    text-align: center;
+  }
+  @media only screen and (max-width:340px){
+    font-size: 9vw;
+  }
+  }
+
+article div{
+  margin-left:195px;
+  position: relative;
+  @media only screen and (max-width:749px){
+    margin-left: 0;
+  }
+}
+.item:before{
+  content: "";
+  display: block;
+  position: absolute;
+  left: -195px;
+  top: 12px;
+  @media only screen and (max-width:749px){
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 0 auto;
+  }
+}
+.item-1:before{
+  background-image: url("../images/icon-1.png");
+  background-repeat: no-repeat;
+  width:145px;
+  height:147px;
+ }
+
+
+.item-2:before{
+  background-image: url("../images/icon-2.png");
+  background-repeat: no-repeat;
+  width:145px;
+  height:147px;
+}
+
+.item-3:before{
+  background-image: url("../images/icon-3.png");
+  background-repeat: no-repeat;
+  width:145px;
+  height:147px;
+}
+
+.item-4:before{
+  background-image: url("../images/icon-4.png");
+  background-repeat: no-repeat;
+  width:145px;
+  height:147px;
+}
+h1.fp {
+  @media only screen and (max-width: 651px) {
+    text-align: center;
+    display:block;
+  }
+}

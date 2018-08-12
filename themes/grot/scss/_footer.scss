@@ -1,0 +1,82 @@
+footer{
+  section{
+	background-color: map-get($kolor, light);
+  }
+  address {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: flex-start;
+	@media only screen and (max-width:924px){
+	  text-align: center;
+	}
+	@media only screen and (max-width:765px){
+	  justify-content: space-evenly;
+	  align-items: flex-end;
+	}
+	@media only screen and (max-width:561px){
+	  flex-direction: column;
+	  align-items: center;
+	  justify-content: center;
+	  display: inline-block;
+
+	}
+
+
+
+	p{
+	  font-size: map-get($size, footer);
+	  color: map-get($kolor, dark);
+	  letter-spacing: 1px;
+	  line-height: 18px;
+	  font-style: normal;
+	  margin:20px;
+
+	}
+  }
+  p {
+	font-size: map-get($size, footer);
+	color: map-get($kolor, dark);
+	letter-spacing: 1px;
+	line-height: 18px;
+	font-style: normal;
+	text-align: center;
+	margin-top:40px;
+  }
+
+}
+
+.footer2{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-content: space-between;
+  background-color: map-get($kolor, dark);
+  p{
+	font-size: map-get($size,footer2);
+	color: map-get($kolor, light);
+	font-family: 'Bree Serif', serif;
+	word-spacing: -2px;
+	letter-spacing: 2px;
+	text-align: center;
+	margin: 0 20px;
+  }
+  p:last-child{
+	font-size: map-get($size,footer);
+	a{
+	  color: map-get($kolor, light);
+	}
+  }
+}
+
+#statut{
+    margin: 10px auto 0px auto;
+  a{
+	color: map-get($kolor, dark);
+  }
+  @media only screen and (max-width:561px) {
+	margin: 15px auto -37px auto;
+  }
+}

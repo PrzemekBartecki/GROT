@@ -1,0 +1,22 @@
+.page{
+  h2,h3,h4,h5,h6,li{
+	color: map-get($kolor, dark);
+  }
+  h2{
+	font-family: 'Bree Serif', serif;
+	font-size: map-get($size, section);
+	margin-bottom: 22px;
+  }
+  p{
+	line-height: 1.5em;
+  }
+  a{
+	color: map-get($kolor, menuHA );
+  }
+  li{
+	margin: 6px 0 6px 30px;
+  }
+  img{
+	padding:30px;
+  }
+}
